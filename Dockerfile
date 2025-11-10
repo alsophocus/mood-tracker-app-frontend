@@ -13,8 +13,8 @@ RUN flutter pub get
 # Copy the rest of the application
 COPY . .
 
-# Build Flutter web app
-RUN flutter build web --release --web-renderer canvaskit
+# Build Flutter web app (canvaskit is now default, no flag needed)
+RUN flutter build web --release
 
 # Production stage
 FROM nginx:alpine
