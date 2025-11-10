@@ -8,7 +8,7 @@ class EnvConfig {
   }
 
   static String get apiBaseUrl =>
-      dotenv.env['API_BASE_URL'] ?? 'http://localhost:5000/api';
+      dotenv.env['API_BASE_URL'] ?? 'http://localhost:5000';
 
   static int get apiTimeout =>
       int.tryParse(dotenv.env['API_TIMEOUT'] ?? '30000') ?? 30000;
